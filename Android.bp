@@ -21,6 +21,7 @@ cc_binary {
         "-Werror",
         "-Wno-unused-parameter",
         "-Wno-unused-variable",
+        "-Wno-unused-but-set-variable",
     ] + select(soong_config_variable("qtipower", "interaction_boost"), {
         "true": ["-DINTERACTION_BOOST"], 
         default: [],
