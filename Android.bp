@@ -23,7 +23,7 @@ cc_binary {
         "-Wno-unused-variable",
         "-Wno-unused-but-set-variable",
     ] + select(soong_config_variable("qtipower", "interaction_boost"), {
-        "true": ["-DINTERACTION_BOOST"], 
+        true: ["-DINTERACTION_BOOST"], 
         default: [],
     }) + select(soong_config_variable("qtipower", "mode_ext_lib"), {
         any @ lib: ["-DMODE_EXT"],
@@ -89,7 +89,7 @@ cc_fuzz {
         "-Wno-unused-parameter",
         "-Wno-unused-variable",
     ] + select(soong_config_variable("qtipower", "interaction_boost"), {
-        "true": ["-DINTERACTION_BOOST"], 
+        true: ["-DINTERACTION_BOOST"], 
         default: [],
     }),
 
